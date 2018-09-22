@@ -1,0 +1,9 @@
+{
+  "name": "Float-labels",
+  "version": "1.0.0",
+  "description": "Float labels form",
+  "main": "index.js",
+  "repository": "https://github.com/seciker/float-labels-form",
+  "author": "Sebastian Siejek",
+  "license": "MIT"
+}
