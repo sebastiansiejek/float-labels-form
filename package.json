@@ -37,5 +37,14 @@
     "normalize.css": "^8.0.0",
     "postcss-cssnext": "^3.0.2",
     "prettier": "^1.14.2"
-  }
+  },
+  "scripts": {
+    "dev": "webpack --watch --mode development",
+    "build": "cross-env NODE_ENV=production webpack --mode production"
+  },
+  "browserslist": [
+    "last 4 version",
+    "> 1%",
+    "ie 11"
+  ]
 }
