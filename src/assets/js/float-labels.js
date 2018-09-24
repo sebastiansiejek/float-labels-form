@@ -1,6 +1,12 @@
 class FloatLabels {
   constructor(defaultSettings = { container: '.form-field input, .form-field, textarea' }) {
     this.defaultSettings = defaultSettings;
+    this.init();
+  }
+
+  init() {
+    this.getContainer.forEach(el => el.addEventListener('focus', e => this.onFocus(e)));
+    this.getContainer.forEach(el => el.addEventListener('keypress', e => this.onKeyPress(e)));
     this.getContainer.forEach(el => el.addEventListener('blur', e => this.onBlur(e)));
   }
 
@@ -8,8 +14,24 @@ class FloatLabels {
     return document.querySelectorAll(this.defaultSettings.container);
   }
 
-  onBlur(e) {
+  addActive(e) {
     e.target.closest('.form-field').classList.add('active');
+  }
+
+  removeActive(e) {
+    e.target.closest('.form-field').classList.remove('active');
+  }
+
+  onFocus(e) {
+    this.addActive(e);
+  }
+
+  onKeyPress(e) {
+    if (e.target.value !== '') { this.addActive(e); }
+  }
+
+  onBlur(e) {
+    if (e.target.value === '') { this.removeActive(e); }
   }
 }
 
