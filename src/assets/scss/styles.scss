@@ -1,0 +1,82 @@
+@import 'variables';
+
+form {
+    .form-field {
+        position: relative;
+        margin: 0;
+        margin-bottom: 20px;
+
+        input,
+        textarea,
+            {
+
+            &:focus,
+            &:hover {
+                outline: none;
+            }
+        }
+
+        &.checkbox {
+            .wpcf7-list-item {
+                margin-left: 0;
+            }
+
+            label {
+                display: block;
+                line-height: 1.5;
+            }
+        }
+
+        &:not(.checkbox) {
+            label {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                font-weight: 500;
+                z-index: 1;
+                color: $color__label;
+                text-transform: uppercase;
+            }
+
+            input,
+            textarea {
+                width: 100%;
+                border-radius: 0;
+                border: none;
+                z-index: 2;
+                padding: 10px 15px 10px 0;
+                background: transparent;
+                border-bottom: 1px solid $color__main;
+                font-weight: 400;
+
+                &:focus,
+                &:hover {
+                    border-bottom: 1px solid darken($color__main, 10%);
+                }
+            }
+
+            &.active,
+            &.message.active {
+                label {
+                    top: 0;
+                }
+
+                textarea,
+                input {
+                    border-color: $color__main;
+                }
+            }
+
+            &.message {
+                label {
+                    top: 25px;
+                }
+            }
+        }
+    }
+
+    textarea {
+        resize: none;
+    }
+}
