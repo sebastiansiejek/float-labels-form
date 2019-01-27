@@ -5,9 +5,11 @@ class FloatLabels {
   }
 
   init() {
-    this.getContainer.forEach(el => el.addEventListener('focus', e => this.onFocus(e)));
-    this.getContainer.forEach(el => el.addEventListener('keypress', e => this.onKeyPress(e)));
-    this.getContainer.forEach(el => el.addEventListener('blur', e => this.onBlur(e)));
+    this.getContainer.forEach((el) => {
+      el.addEventListener('focus', e => this.onFocus(e));
+      el.addEventListener('keypress', e => this.onKeyPress(e));
+      el.addEventListener('blur', e => this.onBlur(e));
+    });
   }
 
   get getContainer() {
