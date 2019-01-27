@@ -1,6 +1,10 @@
 {
   "name": "float-labels-vanilla-js",
+<<<<<<< HEAD
   "version": "1.0.1",
+=======
+  "version": "1.0.0",
+>>>>>>> develop
   "description": "Float labels form",
   "main": "index.js",
   "repository": "https://github.com/seciker/float-labels-form",
