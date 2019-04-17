@@ -1,2 +1,2 @@
-require('./assets/js/float-labels');
+require('./assets/js/index');
 require('./assets/scss/styles.scss');

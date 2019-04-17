@@ -1,5 +1,5 @@
-class FloatLabels {
-  constructor(defaultSettings = { container: '.form-field input, .form-field, textarea' }) {
+export default class FloatLabels {
+  constructor(defaultSettings = { container: '.float-field input, .float-field textarea' }) {
     this.defaultSettings = defaultSettings;
     this.init();
   }
@@ -17,11 +17,11 @@ class FloatLabels {
   }
 
   addActive(e) {
-    e.target.closest('.form-field').classList.add('active');
+    e.target.closest('div').classList.add('active');
   }
 
   removeActive(e) {
-    e.target.closest('.form-field').classList.remove('active');
+    e.target.closest('div').classList.remove('active');
   }
 
   onFocus(e) {
@@ -36,7 +36,3 @@ class FloatLabels {
     if (e.target.value === '') { this.removeActive(e); }
   }
 }
-
-window.addEventListener('load', () => {
-  new FloatLabels();
-});

@@ -1,10 +1,9 @@
 @import 'variables';
 
 form {
-    .form-field {
-        position: relative;
-        margin: 0;
+    .float-field {
         margin-bottom: 20px;
+        position: relative;
 
         input,
         textarea {
@@ -15,39 +14,28 @@ form {
             }
         }
 
-        &.checkbox {
-            .wpcf7-list-item {
-                margin-left: 0;
-            }
-
-            label {
-                display: block;
-                line-height: 1.5;
-            }
-        }
-
         &:not(.checkbox) {
             label {
-                position: absolute;
-                top: 50%;
-                left: 0;
-                transform: translateY(-50%);
-                font-weight: 500;
-                z-index: 1;
                 color: $color__label;
+                font-weight: 500;
+                left: 0;
+                position: absolute;
                 text-transform: uppercase;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 1;
             }
 
             input,
             textarea {
-                width: 100%;
-                border-radius: 0;
-                border: none;
-                z-index: 2;
-                padding: 10px 15px 10px 0;
                 background: transparent;
+                border: none;
                 border-bottom: 1px solid $color__main;
+                border-radius: 0;
                 font-weight: 400;
+                padding: 10px 15px 10px 0;
+                width: 100%;
+                z-index: 2;
 
                 &:focus,
                 &:hover {
